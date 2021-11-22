@@ -1,0 +1,12 @@
+{
+    "user": [
+        "can_view_user"
+    ],
+    "admin": [
+        "can_view_user",
+        "can_view_users"
+    ],
+    "teacher": [
+        "can_view_user"
+    ]
+}

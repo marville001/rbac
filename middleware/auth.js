@@ -14,12 +14,13 @@ module.exports = {
             res.status(400).json({ message: "Invalid token" })
         }    
     },
-    hasPermission: (activity)=>(req,res, next)=>{
+    hasPermission: (permission)=>(req, res, next)=>{
         const {role} = req.user;
-        if(roles[role].includes(activity)){
-            next()
-        }else{
-            return res.status(403).send({ success: false, message: "Access denied. " });
+        if(roles[role].includes(permission)){
+            next();
+        }
+        else{
+            return res.status(403).send({message: "Forbidden: can't access the route"})
         }
     }
 }

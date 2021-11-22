@@ -1,12 +1,14 @@
 {
     "user": [
-        "can_view_user"
+        "can_view_profile",
+        "can_update_profile"
     ],
     "admin": [
         "can_view_user",
-        "can_view_users"
+        "can_get_all_users"
     ],
-    "teacher": [
-        "can_view_user"
+    "guest": [
+        "can_view_profile",
+        "can_view_listing"
     ]
 }

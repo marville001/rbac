@@ -8,6 +8,6 @@ const { authenticated,hasPermission } = require("../middleware/auth");
 
 router.post("/auth/login", loginUser);
 router.post("/auth/register", registerUser);
-router.get("/all",authenticated, hasPermission("can_view_users"), getAllUser)
+router.get("/all",hasPermission('can_view_listing'), getAllUser)
 
 module.exports = router;
